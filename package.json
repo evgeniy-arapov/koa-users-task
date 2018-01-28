@@ -12,5 +12,29 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "co-busboy": "^1.4.0",
+    "co-mocha": "^1.2.1",
+    "config": "^1.29.2",
+    "cookie": "^0.3.1",
+    "es6-promisify": "^5.0.0",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-cookie": "^1.0.0",
+    "koa-favicon": "^2.0.0",
+    "koa-generic-session": "^2.0.1",
+    "koa-logger": "^3.1.0",
+    "koa-router": "^7.3.0",
+    "koa-session-mongoose": "^2.0.5",
+    "koa-static": "^4.0.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.1",
+    "mongoose-beautiful-unique-validation": "^7.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "should": "^13.2.1",
+    "trace": "^3.1.0",
+    "uuid": "^3.2.1"
+  }
 }
