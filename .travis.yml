@@ -11,6 +11,7 @@ services:
 # - redis-server
 
 install:
+  - npm install
   - npm install -g mocha
   
 # deploy:
