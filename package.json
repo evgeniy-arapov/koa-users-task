@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "NODE_PATH=. mocha",
     "start": "NODE_PATH=. nodemon index.js"
   },
   "keywords": [],
