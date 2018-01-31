@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "koa-users-task",
+      "env": {
+        "NODE_PATH": "."
+      }
+    }
+  ]
+}

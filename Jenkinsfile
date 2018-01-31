@@ -19,9 +19,10 @@ pipeline {
       steps {
         sh "printenv"
         sh '''
-          cd $PUBLIC_DIR$SUBDOMAIN/ || git clone $GIT_URL $PUBLIC_DIR$SUBDOMAIN && cd $PUBLIC_DIR$SUBDOMAIN/
-          git pull
+          pm2 stop pm2.json;
+          cd $PUBLIC_DIR$SUBDOMAIN/ && git pull || git clone $GIT_URL $PUBLIC_DIR$SUBDOMAIN && cd $PUBLIC_DIR$SUBDOMAIN/
           npm i
+          pm2 start pm2.json
         '''
       }
     }
