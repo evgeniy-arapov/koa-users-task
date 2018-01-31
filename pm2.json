@@ -2,6 +2,7 @@
   "apps": [
     {
       "name": "koa-users-task",
+      "script": "./index.js",
       "env": {
         "NODE_PATH": "."
       }
