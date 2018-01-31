@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh "printenv"
         sh '''
-          cd $PUBLIC_DIR/$SUBDOMAIN
+          cd $PUBLIC_DIR$SUBDOMAIN/
           git pull
           npm i
         '''
