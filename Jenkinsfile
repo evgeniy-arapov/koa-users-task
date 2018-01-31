@@ -17,7 +17,12 @@ pipeline {
     }
     stage("deploy") {
       steps {
-        sh "printenv"      
+        sh "printenv"
+        sh '''
+          cd $PUBLIC_DIR/$SUBDOMAIN
+          git pull
+          npm i
+        '''
       }
     }
   }
