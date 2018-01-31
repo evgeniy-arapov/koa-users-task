@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    SUBDOMAIN = "koa-users-task"
+  }
   stages {
     stage("install dependencies") {
       steps {
@@ -11,6 +14,9 @@ pipeline {
         sh "mocha --version || npm i -g mocha"
         sh "npm test"
       }
+    }
+    stage("deploy") {
+      sh "printenv"
     }
   }
 }
