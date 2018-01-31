@@ -19,10 +19,11 @@ pipeline {
       steps {
         sh "printenv"
         sh '''
-          pm2 stop pm2.json;
+          pm2 stop $SUBDOMAIN
           cd $PUBLIC_DIR$SUBDOMAIN/ && git pull || git clone $GIT_URL $PUBLIC_DIR$SUBDOMAIN && cd $PUBLIC_DIR$SUBDOMAIN/
           npm i
-          pm2 start pm2.json
+          NODE_PATH=. pm2 start index.js --name=$SUBDOMAIN
+          pm2 show $SUBDOMAIN
         '''
       }
     }
