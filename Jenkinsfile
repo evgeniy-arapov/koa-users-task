@@ -8,7 +8,8 @@ pipeline {
     }
     stage("Test") {
       steps {
-        sh "mocha -v || npm i -g mocha && mocha"
+        sh "mocha --version || npm i -g mocha"
+        sh "npm test"
       }
     }
   }
