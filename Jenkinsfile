@@ -16,7 +16,9 @@ pipeline {
       }
     }
     stage("deploy") {
-      sh "printenv"
+      steps {
+        sh "printenv"      
+      }
     }
   }
 }
